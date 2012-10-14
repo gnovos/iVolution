@@ -1,25 +1,37 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.7'
-
+gem 'rails'
 gem 'thin'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
-
-gem 'jquery-rails'
 
 group :production do
   gem 'pg'
 end
 
 group :test, :development do
+  gem 'rspec'
+  gem 'rr'
   gem 'sqlite3'
-
+  gem 'rspec-rails'
+  gem 'factory_girl'
+  gem 'factory_girl_rails'
+  gem 'nifty-generators'
+  gem 'debugger'
 end
 
-# To use debugger
-# gem 'debugger'
+group :test do
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
+end
+
+gem 'jquery-rails'
+gem 'activeadmin'
+gem 'inherited_resources'
+gem 'ruby-conf', :git => 'https://github.com/gnovos/ruby-conf.git'
+
