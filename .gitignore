@@ -13,3 +13,9 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+/.bundle
+/db/*.sqlite3
+/log/*.log
+/tmp
+/.idea
+/log/
