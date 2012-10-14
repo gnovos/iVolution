@@ -4,6 +4,8 @@ class DevicesController < ApplicationController
 
   def show
     @device = Device.find_by_identifier(params['id'])
+    @device ||= Device.create!(identifier:params['id'])
+
     show!
   end
 end
