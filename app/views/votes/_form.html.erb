@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :device %><br />
-    <%= f.text_field :device %>
+    <%= f.label :device_id %><br />
+    <%= f.collection_select(:device_id, Device.all, :id, :default_name) %>
   </div>
   <div class="field">
-    <%= f.label :feature %><br />
-    <%= f.text_field :feature %>
+    <%= f.label :feature_id %><br />
+    <%= f.collection_select(:feature_id, Feature.all, :id, :default_name) %>
   </div>
   <div class="field">
     <%= f.label :points %><br />

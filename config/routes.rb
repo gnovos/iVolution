@@ -1,18 +1,15 @@
 IVolution::Application.routes.draw do
 
-  resources :votes
-
-  resources :features
-
-  resources :devices
+  ActiveAdmin.routes(self)
+  devise_for :admin_users, ActiveAdmin::Devise.config
 
   devise_for :users
-
   resources :users
 
-  ActiveAdmin.routes(self)
+  resources :devices
+  resources :features
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
+  resources :votes
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
