@@ -2,8 +2,5 @@
 
 FactoryGirl.define do
   factory :feature do
-    device nil
-    body "MyText"
-    status "MyString"
   end
 end
