@@ -3,13 +3,14 @@ IVolution::Application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  devise_for :users
-  resources :users
+  resources :devices, :only => [ :create, :show ] do
+    resources :features, :only => [ :create, :update, :show ] do
+      resources :votes, :only => [ :create ]
+    end
+  end
 
-  resources :devices
-  resources :features
+  resources :features, :only => [ :index, :show ]
 
-  resources :votes
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

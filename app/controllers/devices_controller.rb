@@ -1,3 +1,4 @@
-class DevicesController < InheritedResources::Base
-  respond_to :html, :xml, :json
+class DevicesController < ApplicationController
+  respond_to :json
+  inherit_resources
 end
