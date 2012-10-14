@@ -9,4 +9,5 @@ class Device < ActiveRecord::Base
   def default_name
     identifier
   end
+
 end
