@@ -14,8 +14,6 @@ group :production do
 end
 
 group :test, :development do
-  gem 'rspec'
-  gem 'rr'
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'factory_girl'
@@ -28,6 +26,8 @@ group :test do
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'database_cleaner'
+  gem 'rr'
+  gem 'rspec'
 end
 
 gem 'jquery-rails'
